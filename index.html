@@ -378,52 +378,33 @@ By registering, you agree to our Privacy Policy and Terms & Conditions.
 </div>
 
 <script>
+form.addEventListener("submit", function(e){
+  e.preventDefault();
 
-const phone=document.getElementById("phone");
-const email=document.getElementById("email");
-const form=document.getElementById("jobForm");
-const modal=document.getElementById("thankYouModal");
+  if(!validatePhone() || !validateEmail()){
+    alert("Please enter valid phone number and email.");
+    return;
+  }
 
-phone.addEventListener("input",()=>{
-phone.value=phone.value.replace(/\D/g,'').slice(0,10);
+  const data = new FormData(form);
+
+  // Fire and forget Google Form submit
+  fetch(form.action, {
+    method: "POST",
+    body: data,
+    mode: "no-cors"
+  });
+
+  // Show success UI immediately
+  modal.classList.add("show");
+
+  // Redirect to WhatsApp after 2 seconds
+  setTimeout(function(){
+    window.location.href="https://chat.whatsapp.com/JplilV8E5qo8cp2y9ElWM8";
+  }, 2000);
 });
-
-function validatePhone(){
-return /^\d{10}$/.test(phone.value);
-}
-
-function validateEmail(){
-return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
-}
-
-form.addEventListener("submit",function(e){
-e.preventDefault();
-
-if(validatePhone() && validateEmail()){
-
-const data=new FormData(form);
-
-fetch(form.action,{
-method:"POST",
-body:data,
-mode:"no-cors"
-}).then(()=>{
-
-modal.classList.add("show");
-
-setTimeout(()=>{
-window.location.href="https://chat.whatsapp.com/JplilV8E5qo8cp2y9ElWM8";
-},4000);
-
-});
-
-}else{
-alert("Please enter valid phone number and email.");
-}
-
-});
-
 </script>
+
 
 </body>
 </html> 
