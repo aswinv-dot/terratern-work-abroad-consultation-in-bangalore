@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Work Abroad Consultation in Bangalore - TerraTern</title>
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/aswinv-dot/terratern-work-abroad-consultation-in-bangalore/main/favicon.png">
-
+<title>SAP is Hiring - 400+ Jobs Available</title>
 
 <!-- Poppins Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -46,8 +44,8 @@ margin-bottom:15px;
 }
 
 .logo-wrap img{
-width:100px;
-height:100px;
+width:80px;
+height:80px;
 object-fit:contain;
 background:transparent;
 }
@@ -218,16 +216,11 @@ fill:none;
 
 <!-- LOGO PLACEHOLDER -->
 <div class="logo-wrap">
-<img src="https://raw.githubusercontent.com/aswinv-dot/terratern-work-abroad-consultation-in-bangalore/main/logo.png" alt="Logo">
+<img src="https://raw.githubusercontent.com/aswinv-dot/SAP-is-hiring/main/logo.png" alt="Logo">
 </div>
 
-<h1>Plan Your Move Abroad</h1>
-<p class="subtitle">Free Immigration Consultation – This Saturday</p>
-
-<p class="subtitle">
-Walk in for <span class="highlight">Instant Answers</span> to all your Immigration Queries.
-</p>
-
+<h1>Plan your Move Abroad!</h1>
+<p class="subtitle">Walk-in for <span class="highlight">Instant Answers</span> to all your Immigration Queries.</p>
 
 <form id="jobForm"
 action="https://docs.google.com/forms/d/e/1FAIpQLSdZtgawwebaR-zUMMLmP3j_8AplduEXtuBVk0CNXZTjJpnFjA/formResponse"
@@ -344,8 +337,6 @@ method="POST">
 
 </div>
 
-
-
 <div class="cta-note">
 Register and Join our WhatsApp Group for Updates on this Event
 </div>
@@ -353,15 +344,6 @@ Register and Join our WhatsApp Group for Updates on this Event
 <button type="submit">Register Now</button>
 
 </form>
-  <div style="text-align:center;margin-top:20px;font-size:12px;color:#666;">
-<a href="https://terratern.com/privacy-policy/" target="_blank" style="color:#255cc1;text-decoration:none;">Privacy Policy</a>
-&nbsp; | &nbsp;
-<a href="https://terratern.com/terms-and-condition/" target="_blank" style="color:#255cc1;text-decoration:none;">Terms & Conditions</a>
-</div>
-<div style="text-align:center;margin-top:8px;font-size:11px;color:#666;">
-By registering, you agree to our Privacy Policy and Terms & Conditions.
-</div>
-
 </div>
 
 <!-- MODAL -->
@@ -378,33 +360,52 @@ By registering, you agree to our Privacy Policy and Terms & Conditions.
 </div>
 
 <script>
-form.addEventListener("submit", function(e){
-  e.preventDefault();
 
-  if(!validatePhone() || !validateEmail()){
-    alert("Please enter valid phone number and email.");
-    return;
-  }
+const phone=document.getElementById("phone");
+const email=document.getElementById("email");
+const form=document.getElementById("jobForm");
+const modal=document.getElementById("thankYouModal");
 
-  const data = new FormData(form);
-
-  // Fire and forget Google Form submit
-  fetch(form.action, {
-    method: "POST",
-    body: data,
-    mode: "no-cors"
-  });
-
-  // Show success UI immediately
-  modal.classList.add("show");
-
-  // Redirect to WhatsApp after 2 seconds
-  setTimeout(function(){
-    window.location.href="https://chat.whatsapp.com/JplilV8E5qo8cp2y9ElWM8";
-  }, 2000);
+phone.addEventListener("input",()=>{
+phone.value=phone.value.replace(/\D/g,'').slice(0,10);
 });
-</script>
 
+function validatePhone(){
+return /^\d{10}$/.test(phone.value);
+}
+
+function validateEmail(){
+return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
+}
+
+form.addEventListener("submit",function(e){
+e.preventDefault();
+
+if(validatePhone() && validateEmail()){
+
+const data=new FormData(form);
+
+fetch(form.action,{
+method:"POST",
+body:data,
+mode:"no-cors"
+}).then(()=>{
+
+modal.classList.add("show");
+
+setTimeout(()=>{
+window.location.href="https://chat.whatsapp.com/JplilV8E5qo8cp2y9ElWM8";
+},4000);
+
+});
+
+}else{
+alert("Please enter valid phone number and email.");
+}
+
+});
+
+</script>
 
 </body>
 </html> 
