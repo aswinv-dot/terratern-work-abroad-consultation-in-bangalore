@@ -233,7 +233,9 @@ Walk in for <span class="highlight">Instant Answers</span> to all your Immigrati
 
 <form id="jobForm"
 action="https://docs.google.com/forms/d/e/1FAIpQLSdZtgawwebaR-zUMMLmP3j_8AplduEXtuBVk0CNXZTjJpnFjA/formResponse"
-method="POST">
+method="POST"
+target="hidden_iframe">
+
 
 <!-- FULL NAME -->
 <div class="form-group">
@@ -354,6 +356,8 @@ Register and Join our WhatsApp Group for Updates on this Event
 <button type="submit">Register Now</button>
 
 </form>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
   <div style="text-align:center;margin-top:20px;font-size:12px;color:#666;">
 <a href="https://terratern.com/privacy-policy/" target="_blank" style="color:#255cc1;text-decoration:none;">Privacy Policy</a>
 &nbsp; | &nbsp;
@@ -379,9 +383,6 @@ By registering, you agree to our Privacy Policy and Terms & Conditions.
 </div>
 
 <script>
-
-<script>
-
 const phone=document.getElementById("phone");
 const email=document.getElementById("email");
 const form=document.getElementById("jobForm");
@@ -407,7 +408,7 @@ alert("Please enter valid phone number and email.");
 return;
 }
 
-/* Allow native submit to Google Form */
+/* allow native form submit */
 modal.classList.add("show");
 
 setTimeout(()=>{
@@ -416,6 +417,7 @@ window.location.href="https://chat.whatsapp.com/JplilV8E5qo8cp2y9ElWM8";
 
 });
 </script>
+
 
 
 </body>
