@@ -3,72 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Work Abroad Consultation in Bangalore - TerraTern</title>
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/aswinv-dot/terratern-work-abroad-consultation-in-bangalore/main/favicon.png">
+
+
+<!-- Poppins Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#00215c,#255cc1);
+background:linear-gradient(135deg,#00215c 0%,#255cc1 100%);
 min-height:100vh;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 padding:20px;
 }
 
 .container{
 background:#fff;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,.3);
 max-width:520px;
 width:100%;
-border-radius:20px;
-padding:40px 35px;
-box-shadow:0 20px 60px rgba(0,0,0,.3);
+padding:45px 40px;
 }
 
-.logo{
-text-align:center;
-font-size:26px;
-font-weight:700;
-color:#00215c;
-margin-bottom:8px;
+/* LOGO */
+.logo-wrap{
+display:flex;
+justify-content:center;
+margin-bottom:15px;
+}
+
+.logo-wrap img{
+width:100px;
+height:100px;
+object-fit:contain;
+background:transparent;
 }
 
 h1{
-text-align:center;
 color:#00215c;
-margin-bottom:5px;
+text-align:center;
+margin-bottom:10px;
 }
 
 .subtitle{
-text-align:center;
 color:#255cc1;
+text-align:center;
+margin-bottom:30px;
 font-weight:600;
-margin-bottom:25px;
+}
+
+.highlight{
+background:#f1c819;
+padding:2px 8px;
+border-radius:5px;
+font-weight:700;
 }
 
 .form-group{
-margin-bottom:16px;
+margin-bottom:18px;
 }
 
 label{
 display:block;
-font-weight:600;
-color:#00215c;
 margin-bottom:6px;
+color:#00215c;
+font-weight:600;
 }
 
 input,select{
 width:100%;
-padding:13px;
-border-radius:10px;
+padding:14px;
 border:2px solid #9acbfd;
-font-size:15px;
+border-radius:10px;
+font-size:0.95em;
 }
 
 input:focus,select:focus{
@@ -76,18 +96,48 @@ border-color:#255cc1;
 outline:none;
 }
 
-/* SLOT STYLES */
+input.error{
+border-color:#e74c3c;
+}
+
+.error-message{
+color:#e74c3c;
+font-size:.8em;
+display:none;
+}
+
+.error-message.show{
+display:block;
+}
+
+button{
+width:100%;
+padding:16px;
+background:linear-gradient(135deg,#255cc1,#00215c);
+color:#fff;
+border:none;
+border-radius:10px;
+font-size:1.05em;
+font-weight:600;
+cursor:pointer;
+}
+
+/* SLOT GROUPS */
+
+.slot-section{
+margin-bottom:15px;
+}
+
 .slot-title{
-margin-top:10px;
-font-weight:700;
+font-weight:600;
 color:#00215c;
+margin-bottom:8px;
 }
 
 .slot-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:10px;
-margin-top:8px;
 }
 
 .slot-grid input{
@@ -96,11 +146,11 @@ display:none;
 
 .slot-grid label{
 border:2px solid #9acbfd;
-padding:10px;
+padding:11px;
 border-radius:8px;
 text-align:center;
 cursor:pointer;
-font-size:14px;
+font-size:0.85em;
 }
 
 .slot-grid input:checked + label{
@@ -109,33 +159,24 @@ color:#fff;
 border-color:#255cc1;
 }
 
-button{
-margin-top:20px;
-width:100%;
-padding:15px;
-border:none;
-border-radius:10px;
-background:linear-gradient(135deg,#255cc1,#00215c);
-color:#fff;
-font-size:17px;
-font-weight:700;
-cursor:pointer;
+.cta-note{
+text-align:center;
+font-size:.85em;
+color:#00215c;
+margin-bottom:8px;
+font-weight:600;
 }
 
-.footer-text{
-text-align:center;
-font-size:12px;
-margin-top:15px;
-color:#555;
-}
+/* MODAL */
 
 .modal{
-position:fixed;
-inset:0;
-background:rgba(0,33,92,.95);
 display:none;
-justify-content:center;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,33,92,.95);
 align-items:center;
+justify-content:center;
 }
 
 .modal.show{
@@ -144,30 +185,30 @@ display:flex;
 
 .modal-content{
 background:#fff;
-padding:35px;
-border-radius:18px;
+padding:40px;
+border-radius:20px;
 text-align:center;
-max-width:340px;
+max-width:350px;
 }
 
 .checkmark{
-width:70px;
-height:70px;
+width:70px;height:70px;
 background:#f1c819;
 border-radius:50%;
-margin:0 auto 18px;
+margin:0 auto 20px;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 }
 
 .checkmark svg{
-width:36px;
-height:36px;
+width:35px;
+height:35px;
 stroke:#fff;
 stroke-width:3;
 fill:none;
 }
+
 </style>
 </head>
 
@@ -175,34 +216,42 @@ fill:none;
 
 <div class="container">
 
-<div class="logo">TerraTern</div>
+<!-- LOGO PLACEHOLDER -->
+<div class="logo-wrap">
+<img src="https://raw.githubusercontent.com/aswinv-dot/terratern-work-abroad-consultation-in-bangalore/main/logo.png" alt="Logo">
+</div>
 
 <h1>Plan Your Move Abroad</h1>
 <p class="subtitle">Free Immigration Consultation – This Saturday</p>
+
+<p class="subtitle">
+Walk in for <span class="highlight">Instant Answers</span> to all your Immigration Queries.
+</p>
+
 
 <form id="jobForm"
 action="https://docs.google.com/forms/d/e/1FAIpQLSdZtgawwebaR-zUMMLmP3j_8AplduEXtuBVk0CNXZTjJpnFjA/formResponse"
 method="POST">
 
-<!-- Name -->
+<!-- FULL NAME -->
 <div class="form-group">
 <label>Full Name *</label>
-<input type="text" name="entry.1164035048" required>
+<input type="text" id="name" name="entry.1164035048" required>
 </div>
 
-<!-- Phone -->
+<!-- MOBILE -->
 <div class="form-group">
 <label>Mobile Number (Preferably WhatsApp) *</label>
 <input type="tel" id="phone" name="entry.1792445892" required>
 </div>
 
-<!-- Email -->
+<!-- EMAIL -->
 <div class="form-group">
 <label>Email ID *</label>
 <input type="email" id="email" name="entry.1745007900" required>
 </div>
 
-<!-- Education -->
+<!-- EDUCATION -->
 <div class="form-group">
 <label>Educational Qualification *</label>
 <select name="entry.1246698070" required>
@@ -215,7 +264,7 @@ method="POST">
 </select>
 </div>
 
-<!-- Experience -->
+<!-- EXPERIENCE -->
 <div class="form-group">
 <label>Work Experience *</label>
 <select name="entry.957178699" required>
@@ -231,7 +280,7 @@ method="POST">
 </select>
 </div>
 
-<!-- Country -->
+<!-- COUNTRY -->
 <div class="form-group">
 <label>Country Interested *</label>
 <select name="entry.1024440748" required>
@@ -244,9 +293,12 @@ method="POST">
 </div>
 
 <!-- SLOT -->
+
 <div class="form-group">
 <label>Choose the Slot *</label>
 
+<!-- MORNING -->
+<div class="slot-section">
 <div class="slot-title">Morning</div>
 <div class="slot-grid">
 <input type="radio" name="entry.1715985963" id="s1" value="10AM - 11AM" required>
@@ -255,7 +307,10 @@ method="POST">
 <input type="radio" name="entry.1715985963" id="s2" value="11AM - 12PM">
 <label for="s2">11AM - 12PM</label>
 </div>
+</div>
 
+<!-- AFTERNOON -->
+<div class="slot-section">
 <div class="slot-title">Afternoon</div>
 <div class="slot-grid">
 <input type="radio" name="entry.1715985963" id="s3" value="12PM - 1PM">
@@ -267,7 +322,10 @@ method="POST">
 <input type="radio" name="entry.1715985963" id="s5" value="2PM - 3PM">
 <label for="s5">2PM - 3PM</label>
 </div>
+</div>
 
+<!-- EVENING -->
+<div class="slot-section">
 <div class="slot-title">Evening</div>
 <div class="slot-grid">
 <input type="radio" name="entry.1715985963" id="s6" value="3PM - 4PM">
@@ -282,36 +340,45 @@ method="POST">
 <input type="radio" name="entry.1715985963" id="s9" value="6PM - 7PM">
 <label for="s9">6PM - 7PM</label>
 </div>
+</div>
 
+</div>
+
+</div>
+
+<div class="cta-note">
+Register and Join our WhatsApp Group for Updates on this Event
 </div>
 
 <button type="submit">Register Now</button>
 
-<div class="footer-text">
-By registering, you agree to our Privacy Policy & Terms & Conditions
-</div>
-
 </form>
+  <div style="text-align:center;margin-top:20px;font-size:12px;color:#666;">
+<a href="https://terratern.com/privacy-policy/" target="_blank" style="color:#255cc1;text-decoration:none;">Privacy Policy</a>
+&nbsp; | &nbsp;
+<a href="https://terratern.com/terms-and-condition/" target="_blank" style="color:#255cc1;text-decoration:none;">Terms & Conditions</a>
+</div>
+<div style="text-align:center;margin-top:8px;font-size:11px;color:#666;">
+By registering, you agree to our Privacy Policy and Terms & Conditions.
+</div>
 
 </div>
 
-<!-- THANK YOU MODAL -->
+<!-- MODAL -->
 <div class="modal" id="thankYouModal">
 <div class="modal-content">
-
 <div class="checkmark">
 <svg viewBox="0 0 52 52">
 <polyline points="14 27 22 35 38 19"/>
 </svg>
 </div>
-
 <h2>Thank You!</h2>
 <p>Redirecting you to WhatsApp Group...</p>
-
 </div>
 </div>
 
 <script>
+
 const phone=document.getElementById("phone");
 const email=document.getElementById("email");
 const form=document.getElementById("jobForm");
@@ -350,5 +417,13 @@ window.location.href="https://chat.whatsapp.com/JplilV8E5qo8cp2y9ElWM8";
 
 });
 
+}else{
+alert("Please enter valid phone number and email.");
+}
+
+});
+
+</script>
+
 </body>
-</html>
+</html> - final code
