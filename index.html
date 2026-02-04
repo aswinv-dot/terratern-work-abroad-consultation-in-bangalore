@@ -3,25 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Work Abroad Consultation in Bangalore - TerraTern</title>
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/aswinv-dot/terratern-work-abroad-consultation-in-bangalore
-/main/favicon.png">
-
-
-<!-- Poppins Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>SAP is Hiring - 400+ Jobs Available</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
 }
 
 body{
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 background:linear-gradient(135deg,#00215c 0%,#255cc1 100%);
 min-height:100vh;
 display:flex;
@@ -36,21 +28,7 @@ border-radius:20px;
 box-shadow:0 20px 60px rgba(0,0,0,.3);
 max-width:520px;
 width:100%;
-padding:45px 40px;
-}
-
-/* LOGO */
-.logo-wrap{
-display:flex;
-justify-content:center;
-margin-bottom:15px;
-}
-
-.logo-wrap img{
-width:100px;
-height:100px;
-object-fit:contain;
-background:transparent;
+padding:50px 40px;
 }
 
 h1{
@@ -70,7 +48,7 @@ font-weight:600;
 background:#f1c819;
 padding:2px 8px;
 border-radius:5px;
-font-weight:700;
+font-weight:bold;
 }
 
 .form-group{
@@ -89,7 +67,7 @@ width:100%;
 padding:14px;
 border:2px solid #9acbfd;
 border-radius:10px;
-font-size:0.95em;
+font-size:1em;
 }
 
 input:focus,select:focus{
@@ -103,7 +81,7 @@ border-color:#e74c3c;
 
 .error-message{
 color:#e74c3c;
-font-size:.8em;
+font-size:.85em;
 display:none;
 }
 
@@ -118,23 +96,12 @@ background:linear-gradient(135deg,#255cc1,#00215c);
 color:#fff;
 border:none;
 border-radius:10px;
-font-size:1.05em;
+font-size:1.1em;
 font-weight:600;
 cursor:pointer;
 }
 
-/* SLOT GROUPS */
-
-.slot-section{
-margin-bottom:15px;
-}
-
-.slot-title{
-font-weight:600;
-color:#00215c;
-margin-bottom:8px;
-}
-
+/* SLOT BUTTONS */
 .slot-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -147,11 +114,11 @@ display:none;
 
 .slot-grid label{
 border:2px solid #9acbfd;
-padding:11px;
+padding:12px;
 border-radius:8px;
 text-align:center;
 cursor:pointer;
-font-size:0.85em;
+font-size:0.9em;
 }
 
 .slot-grid input:checked + label{
@@ -162,13 +129,11 @@ border-color:#255cc1;
 
 .cta-note{
 text-align:center;
-font-size:.85em;
+font-size:.9em;
 color:#00215c;
 margin-bottom:8px;
 font-weight:600;
 }
-
-/* MODAL */
 
 .modal{
 display:none;
@@ -209,53 +174,41 @@ stroke:#fff;
 stroke-width:3;
 fill:none;
 }
-
 </style>
 </head>
 
 <body>
 
 <div class="container">
-
-<!-- LOGO PLACEHOLDER -->
-<div class="logo-wrap">
-<img src="https://raw.githubusercontent.com/aswinv-dot/terratern-work-abroad-consultation-in-bangalore
-/main/logo.png" alt="Logo">
-</div>
-
-<h1>Plan Your Move Abroad</h1>
-<p class="subtitle">Free Immigration Consultation – This Saturday</p>
-
-<p class="subtitle">
-Walk in for <span class="highlight">Instant Answers</span> to all your Immigration Queries.
-</p>
-
+<h1>SAP is Hiring</h1>
+<p class="subtitle">Get access to <span class="highlight">400+</span> recently posted jobs for free</p>
 
 <form id="jobForm"
 action="https://docs.google.com/forms/d/e/1FAIpQLSdZtgawwebaR-zUMMLmP3j_8AplduEXtuBVk0CNXZTjJpnFjA/formResponse"
-method="POST"
-target="hidden_iframe">
+method="POST">
 
-
-<!-- FULL NAME -->
+<!-- Full Name -->
 <div class="form-group">
 <label>Full Name *</label>
 <input type="text" id="name" name="entry.1164035048" required>
+<div class="error-message" id="nameError">Enter valid name</div>
 </div>
 
-<!-- MOBILE -->
+<!-- Mobile -->
 <div class="form-group">
 <label>Mobile Number (Preferably WhatsApp) *</label>
 <input type="tel" id="phone" name="entry.1792445892" required>
+<div class="error-message" id="phoneError">Enter valid 10-digit number</div>
 </div>
 
-<!-- EMAIL -->
+<!-- Email -->
 <div class="form-group">
 <label>Email ID *</label>
 <input type="email" id="email" name="entry.1745007900" required>
+<div class="error-message" id="emailError">Enter valid email</div>
 </div>
 
-<!-- EDUCATION -->
+<!-- Education -->
 <div class="form-group">
 <label>Educational Qualification *</label>
 <select name="entry.1246698070" required>
@@ -268,7 +221,7 @@ target="hidden_iframe">
 </select>
 </div>
 
-<!-- EXPERIENCE -->
+<!-- Experience -->
 <div class="form-group">
 <label>Work Experience *</label>
 <select name="entry.957178699" required>
@@ -284,7 +237,7 @@ target="hidden_iframe">
 </select>
 </div>
 
-<!-- COUNTRY -->
+<!-- Country -->
 <div class="form-group">
 <label>Country Interested *</label>
 <select name="entry.1024440748" required>
@@ -296,57 +249,40 @@ target="hidden_iframe">
 </select>
 </div>
 
-<!-- SLOT -->
-
+<!-- Slot -->
 <div class="form-group">
 <label>Choose the Slot *</label>
 
-<!-- MORNING -->
-<div class="slot-section">
-<div class="slot-title">Morning</div>
 <div class="slot-grid">
-<input type="radio" name="entry.1715985963" id="s1" value="10AM - 11AM" required>
-<label for="s1">10AM - 11AM</label>
 
-<input type="radio" name="entry.1715985963" id="s2" value="11AM - 12PM">
-<label for="s2">11AM - 12PM</label>
+<input type="radio" name="entry.1715985963" id="s1" value="10am - 11am" required>
+<label for="s1">10am - 11am</label>
+
+<input type="radio" name="entry.1715985963" id="s2" value="11am - 12pm">
+<label for="s2">11am - 12pm</label>
+
+<input type="radio" name="entry.1715985963" id="s3" value="12pm - 1pm">
+<label for="s3">12pm - 1pm</label>
+
+<input type="radio" name="entry.1715985963" id="s4" value="1pm - 2pm">
+<label for="s4">1pm - 2pm</label>
+
+<input type="radio" name="entry.1715985963" id="s5" value="2pm - 3pm">
+<label for="s5">2pm - 3pm</label>
+
+<input type="radio" name="entry.1715985963" id="s6" value="3pm - 4pm">
+<label for="s6">3pm - 4pm</label>
+
+<input type="radio" name="entry.1715985963" id="s7" value="4pm - 5pm">
+<label for="s7">4pm - 5pm</label>
+
+<input type="radio" name="entry.1715985963" id="s8" value="5pm - 6pm">
+<label for="s8">5pm - 6pm</label>
+
+<input type="radio" name="entry.1715985963" id="s9" value="6pm - 7pm">
+<label for="s9">6pm - 7pm</label>
+
 </div>
-</div>
-
-<!-- AFTERNOON -->
-<div class="slot-section">
-<div class="slot-title">Afternoon</div>
-<div class="slot-grid">
-<input type="radio" name="entry.1715985963" id="s3" value="12PM - 1PM">
-<label for="s3">12PM - 1PM</label>
-
-<input type="radio" name="entry.1715985963" id="s4" value="1PM - 2PM">
-<label for="s4">1PM - 2PM</label>
-
-<input type="radio" name="entry.1715985963" id="s5" value="2PM - 3PM">
-<label for="s5">2PM - 3PM</label>
-</div>
-</div>
-
-<!-- EVENING -->
-<div class="slot-section">
-<div class="slot-title">Evening</div>
-<div class="slot-grid">
-<input type="radio" name="entry.1715985963" id="s6" value="3PM - 4PM">
-<label for="s6">3PM - 4PM</label>
-
-<input type="radio" name="entry.1715985963" id="s7" value="4PM - 5PM">
-<label for="s7">4PM - 5PM</label>
-
-<input type="radio" name="entry.1715985963" id="s8" value="5PM - 6PM">
-<label for="s8">5PM - 6PM</label>
-
-<input type="radio" name="entry.1715985963" id="s9" value="6PM - 7PM">
-<label for="s9">6PM - 7PM</label>
-</div>
-</div>
-
-
 </div>
 
 <div class="cta-note">
@@ -356,20 +292,9 @@ Register and Join our WhatsApp Group for Updates on this Event
 <button type="submit">Register Now</button>
 
 </form>
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
-  <div style="text-align:center;margin-top:20px;font-size:12px;color:#666;">
-<a href="https://terratern.com/privacy-policy/" target="_blank" style="color:#255cc1;text-decoration:none;">Privacy Policy</a>
-&nbsp; | &nbsp;
-<a href="https://terratern.com/terms-and-condition/" target="_blank" style="color:#255cc1;text-decoration:none;">Terms & Conditions</a>
-</div>
-<div style="text-align:center;margin-top:8px;font-size:11px;color:#666;">
-By registering, you agree to our Privacy Policy and Terms & Conditions.
 </div>
 
-</div>
-
-<!-- MODAL -->
+<!-- THANK YOU MODAL -->
 <div class="modal" id="thankYouModal">
 <div class="modal-content">
 <div class="checkmark">
@@ -401,15 +326,18 @@ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
 }
 
 form.addEventListener("submit",function(e){
-
-  
-if(!validatePhone() || !validateEmail()){
 e.preventDefault();
-alert("Please enter valid phone number and email.");
-return;
-}
 
-/* allow native form submit */
+if(validatePhone() && validateEmail()){
+
+const data=new FormData(form);
+
+fetch(form.action,{
+method:"POST",
+body:data,
+mode:"no-cors"
+}).then(()=>{
+
 modal.classList.add("show");
 
 setTimeout(()=>{
@@ -417,9 +345,12 @@ window.location.href="https://chat.whatsapp.com/JplilV8E5qo8cp2y9ElWM8";
 },4000);
 
 });
+
+}else{
+alert("Please enter valid phone number and email.");
+}
+});
 </script>
 
-
-
 </body>
-</html>
+</html> 
