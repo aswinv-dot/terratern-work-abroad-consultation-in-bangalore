@@ -6,7 +6,6 @@
 
 <title>SAP is Hiring - 400+ Jobs Available</title>
 
-<!-- Poppins Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -47,8 +46,9 @@ margin-bottom:15px;
 width:100px;
 height:100px;
 object-fit:contain;
-background:transparent;
 }
+
+/* HEADINGS */
 
 h1{
 color:#00215c;
@@ -69,6 +69,8 @@ padding:2px 8px;
 border-radius:5px;
 font-weight:700;
 }
+
+/* FORM */
 
 .form-group{
 margin-bottom:18px;
@@ -94,33 +96,7 @@ border-color:#255cc1;
 outline:none;
 }
 
-input.error{
-border-color:#e74c3c;
-}
-
-.error-message{
-color:#e74c3c;
-font-size:.8em;
-display:none;
-}
-
-.error-message.show{
-display:block;
-}
-
-button{
-width:100%;
-padding:16px;
-background:linear-gradient(135deg,#255cc1,#00215c);
-color:#fff;
-border:none;
-border-radius:10px;
-font-size:1.05em;
-font-weight:600;
-cursor:pointer;
-}
-
-/* SLOT GROUPS */
+/* SLOT */
 
 .slot-section{
 margin-bottom:15px;
@@ -157,11 +133,27 @@ color:#fff;
 border-color:#255cc1;
 }
 
+/* BUTTON */
+
+button{
+width:100%;
+padding:16px;
+background:linear-gradient(135deg,#255cc1,#00215c);
+color:#fff;
+border:none;
+border-radius:10px;
+font-size:1.05em;
+font-weight:600;
+cursor:pointer;
+}
+
+/* NOTE */
+
 .cta-note{
 text-align:center;
 font-size:.85em;
 color:#00215c;
-margin-bottom:8px;
+margin:12px 0;
 font-weight:600;
 }
 
@@ -170,11 +162,14 @@ font-weight:600;
 .modal{
 display:none;
 position:fixed;
-top:0;left:0;
-width:100%;height:100%;
+top:0;
+left:0;
+width:100%;
+height:100%;
 background:rgba(0,33,92,.95);
 align-items:center;
 justify-content:center;
+z-index:99;
 }
 
 .modal.show{
@@ -190,7 +185,8 @@ max-width:350px;
 }
 
 .checkmark{
-width:70px;height:70px;
+width:70px;
+height:70px;
 background:#f1c819;
 border-radius:50%;
 margin:0 auto 20px;
@@ -214,22 +210,26 @@ fill:none;
 
 <div class="container">
 
-<!-- LOGO PLACEHOLDER -->
+<!-- LOGO -->
 <div class="logo-wrap">
-<img src="https://raw.githubusercontent.com/aswinv-dot/terratern-work-abroad-consultation-in-bangalore/main/logo.png" alt="Logo">
+<img src="https://raw.githubusercontent.com/aswinv-dot/terratern-work-abroad-consultation-in-bangalore/main/logo.png">
 </div>
 
 <h1>SAP is Hiring</h1>
 <p class="subtitle">Get access to <span class="highlight">400+</span> recently posted jobs for free</p>
 
+<!-- HIDDEN IFRAME -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 <form id="jobForm"
+target="hidden_iframe"
 action="https://docs.google.com/forms/d/e/1FAIpQLSdZtgawwebaR-zUMMLmP3j_8AplduEXtuBVk0CNXZTjJpnFjA/formResponse"
 method="POST">
 
 <!-- FULL NAME -->
 <div class="form-group">
 <label>Full Name *</label>
-<input type="text" id="name" name="entry.1164035048" required>
+<input type="text" name="entry.1164035048" required>
 </div>
 
 <!-- MOBILE -->
@@ -290,60 +290,62 @@ method="POST">
 <div class="form-group">
 <label>Choose the Slot *</label>
 
-<!-- MORNING -->
 <div class="slot-section">
 <div class="slot-title">Morning</div>
 <div class="slot-grid">
-<input type="radio" name="entry.1715985963" id="s1" value="10am - 11am" required>
-<label for="s1">10am - 11am</label>
 
-<input type="radio" name="entry.1715985963" id="s2" value="11am - 12pm">
-<label for="s2">11am - 12pm</label>
+<input type="radio" name="entry.1715985963" value="10am - 11am" required>
+<label>10am - 11am</label>
+
+<input type="radio" name="entry.1715985963" value="11am - 12pm">
+<label>11am - 12pm</label>
+
 </div>
 </div>
 
-<!-- AFTERNOON -->
 <div class="slot-section">
 <div class="slot-title">Afternoon</div>
 <div class="slot-grid">
-<input type="radio" name="entry.1715985963" id="s3" value="12pm - 1pm">
-<label for="s3">12pm - 1pm</label>
 
-<input type="radio" name="entry.1715985963" id="s4" value="1pm - 2pm">
-<label for="s4">1pm - 2pm</label>
+<input type="radio" name="entry.1715985963" value="12pm - 1pm">
+<label>12pm - 1pm</label>
 
-<input type="radio" name="entry.1715985963" id="s5" value="2pm - 3pm">
-<label for="s5">2pm - 3pm</label>
+<input type="radio" name="entry.1715985963" value="1pm - 2pm">
+<label>1pm - 2pm</label>
+
+<input type="radio" name="entry.1715985963" value="2pm - 3pm">
+<label>2pm - 3pm</label>
+
 </div>
 </div>
 
-<!-- EVENING -->
 <div class="slot-section">
 <div class="slot-title">Evening</div>
 <div class="slot-grid">
-<input type="radio" name="entry.1715985963" id="s6" value="3pm - 4pm">
-<label for="s6">3pm - 4pm</label>
 
-<input type="radio" name="entry.1715985963" id="s7" value="4pm - 5pm">
-<label for="s7">4pm - 5pm</label>
+<input type="radio" name="entry.1715985963" value="3pm - 4pm">
+<label>3pm - 4pm</label>
 
-<input type="radio" name="entry.1715985963" id="s8" value="5pm - 6pm">
-<label for="s8">5pm - 6pm</label>
+<input type="radio" name="entry.1715985963" value="4pm - 5pm">
+<label>4pm - 5pm</label>
 
-<input type="radio" name="entry.1715985963" id="s9" value="6pm - 7pm">
-<label for="s9">6pm - 7pm</label>
+<input type="radio" name="entry.1715985963" value="5pm - 6pm">
+<label>5pm - 6pm</label>
+
+<input type="radio" name="entry.1715985963" value="6pm - 7pm">
+<label>6pm - 7pm</label>
+
 </div>
-</div>
-
 </div>
 
 <div class="cta-note">
-Register and Join our WhatsApp Group for Updates on this Event
+Register and join our WhatsApp group for updates on this event
 </div>
 
 <button type="submit">Register Now</button>
 
 </form>
+
 </div>
 
 <!-- MODAL -->
@@ -355,7 +357,7 @@ Register and Join our WhatsApp Group for Updates on this Event
 </svg>
 </div>
 <h2>Thank You!</h2>
-<p>Redirecting you to WhatsApp Group...</p>
+<p>Redirecting you to WhatsApp group...</p>
 </div>
 </div>
 
@@ -363,7 +365,6 @@ Register and Join our WhatsApp Group for Updates on this Event
 
 const phone=document.getElementById("phone");
 const email=document.getElementById("email");
-const form=document.getElementById("jobForm");
 const modal=document.getElementById("thankYouModal");
 
 phone.addEventListener("input",()=>{
@@ -378,18 +379,13 @@ function validateEmail(){
 return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
 }
 
-form.addEventListener("submit",function(e){
+document.getElementById("jobForm").addEventListener("submit",function(e){
+
+if(!validatePhone() || !validateEmail()){
 e.preventDefault();
-
-if(validatePhone() && validateEmail()){
-
-const data=new FormData(form);
-
-fetch(form.action,{
-method:"POST",
-body:data,
-mode:"no-cors"
-}).then(()=>{
+alert("Please enter valid phone number and email.");
+return;
+}
 
 modal.classList.add("show");
 
@@ -399,13 +395,8 @@ window.location.href="https://chat.whatsapp.com/JplilV8E5qo8cp2y9ElWM8";
 
 });
 
-}else{
-alert("Please enter valid phone number and email.");
-}
-
-});
-
 </script>
 
 </body>
 </html>
+
