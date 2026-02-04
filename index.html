@@ -402,6 +402,7 @@ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
 
 form.addEventListener("submit",function(e){
 
+  
 if(!validatePhone() || !validateEmail()){
 e.preventDefault();
 alert("Please enter valid phone number and email.");
