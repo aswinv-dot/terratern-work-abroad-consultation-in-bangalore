@@ -131,6 +131,15 @@ color:#fff;
 border-color:#255cc1;
 }
 
+/* DISABLED SLOTS */
+.slot-grid input:disabled + label{
+background:#e5e5e5;
+border-color:#ccc;
+color:#888;
+cursor:not-allowed;
+text-decoration:line-through;
+}
+
 .cta-note{
 text-align:center;
 font-size:.85em;
@@ -193,7 +202,6 @@ fill:none;
 <h1>Plan your Move Abroad!</h1>
 <p class="subtitle">Meet our Certified Experts to get <span class="highlight">Instant Answers</span> to all your Immigration Queries.</p>
 
-<!-- Hidden iframe -->
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 
 <form id="jobForm"
@@ -260,10 +268,10 @@ method="POST">
 <div class="slot-section">
 <div class="slot-title">Morning</div>
 <div class="slot-grid">
-<input type="radio" name="entry.1715985963" id="s1" value="10am - 11am" required>
+<input type="radio" name="entry.1715985963" id="s1" value="10am - 11am" disabled>
 <label for="s1">10am - 11am</label>
 
-<input type="radio" name="entry.1715985963" id="s2" value="11am - 12pm">
+<input type="radio" name="entry.1715985963" id="s2" value="11am - 12pm" required>
 <label for="s2">11am - 12pm</label>
 </div>
 </div>
@@ -277,7 +285,7 @@ method="POST">
 <input type="radio" name="entry.1715985963" id="s4" value="1pm - 2pm">
 <label for="s4">1pm - 2pm</label>
 
-<input type="radio" name="entry.1715985963" id="s5" value="2pm - 3pm">
+<input type="radio" name="entry.1715985963" id="s5" value="2pm - 3pm" disabled>
 <label for="s5">2pm - 3pm</label>
 </div>
 </div>
@@ -288,39 +296,30 @@ method="POST">
 <input type="radio" name="entry.1715985963" id="s6" value="3pm - 4pm">
 <label for="s6">3pm - 4pm</label>
 
-<input type="radio" name="entry.1715985963" id="s7" value="4pm - 5pm">
+<input type="radio" name="entry.1715985963" id="s7" value="4pm - 5pm" disabled>
 <label for="s7">4pm - 5pm</label>
 
-<input type="radio" name="entry.1715985963" id="s8" value="5pm - 6pm">
+<input type="radio" name="entry.1715985963" id="s8" value="5pm - 6pm" disabled>
 <label for="s8">5pm - 6pm</label>
 
-<input type="radio" name="entry.1715985963" id="s9" value="6pm - 7pm">
+<input type="radio" name="entry.1715985963" id="s9" value="6pm - 7pm" disabled>
 <label for="s9">6pm - 7pm</label>
 </div>
 </div>
 
-</div>
-
-
-
 <button type="submit">Join the WhatsApp Group</button>
 
 </form>
+
 <p style="text-align:center;font-size:12px;margin-top:12px;color:#00215c;">
 By registering, you agree to our 
-<a href="https://terratern.com/privacy-policy" target="_blank" style="color:#255cc1;font-weight:600;text-decoration:none;">
-Privacy Policy
-</a> 
+<a href="https://terratern.com/privacy-policy" target="_blank" style="color:#255cc1;font-weight:600;text-decoration:none;">Privacy Policy</a> 
 and 
-<a href="https://terratern.com/terms-and-conditions" target="_blank" style="color:#255cc1;font-weight:600;text-decoration:none;">
-Terms & Conditions
-</a>.
+<a href="https://terratern.com/terms-and-conditions" target="_blank" style="color:#255cc1;font-weight:600;text-decoration:none;">Terms & Conditions</a>.
 </p>
 
 </div>
 
-
-<!-- MODAL -->
 <div class="modal" id="thankYouModal">
 <div class="modal-content">
 <div class="checkmark">
