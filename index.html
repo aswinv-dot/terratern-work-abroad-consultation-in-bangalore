@@ -380,6 +380,8 @@ By registering, you agree to our Privacy Policy and Terms & Conditions.
 
 <script>
 
+<script>
+
 const phone=document.getElementById("phone");
 const email=document.getElementById("email");
 const form=document.getElementById("jobForm");
@@ -398,18 +400,14 @@ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
 }
 
 form.addEventListener("submit",function(e){
+
+if(!validatePhone() || !validateEmail()){
 e.preventDefault();
+alert("Please enter valid phone number and email.");
+return;
+}
 
-if(validatePhone() && validateEmail()){
-
-const data=new FormData(form);
-
-fetch(form.action,{
-method:"POST",
-body:data,
-mode:"no-cors"
-}).then(()=>{
-
+/* Allow native submit to Google Form */
 modal.classList.add("show");
 
 setTimeout(()=>{
@@ -417,14 +415,8 @@ window.location.href="https://chat.whatsapp.com/JplilV8E5qo8cp2y9ElWM8";
 },4000);
 
 });
-
-}else{
-alert("Please enter valid phone number and email.");
-}
-
-});
-
 </script>
+
 
 </body>
 </html>
