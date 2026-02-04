@@ -3,71 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAP is Hiring - 400+ Jobs Available</title>
+<title>Work Abroad Consultation in Bangalore - TerraTern</title>
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/aswinv-dot/terratern-work-abroad-consultation-in-bangalore /main/favicon.png">
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
 }
 
 body{
-font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-background:linear-gradient(135deg,#00215c 0%,#255cc1 100%);
+background:linear-gradient(135deg,#00215c,#255cc1);
 min-height:100vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 padding:20px;
 }
 
 .container{
 background:#fff;
-border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,.3);
 max-width:520px;
 width:100%;
-padding:50px 40px;
+border-radius:20px;
+padding:40px 35px;
+box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.logo{
+text-align:center;
+font-size:26px;
+font-weight:700;
+color:#00215c;
+margin-bottom:8px;
 }
 
 h1{
-color:#00215c;
 text-align:center;
-margin-bottom:10px;
+color:#00215c;
+margin-bottom:5px;
 }
 
 .subtitle{
-color:#255cc1;
 text-align:center;
-margin-bottom:30px;
+color:#255cc1;
 font-weight:600;
-}
-
-.highlight{
-background:#f1c819;
-padding:2px 8px;
-border-radius:5px;
-font-weight:bold;
+margin-bottom:25px;
 }
 
 .form-group{
-margin-bottom:18px;
+margin-bottom:16px;
 }
 
 label{
 display:block;
-margin-bottom:6px;
-color:#00215c;
 font-weight:600;
+color:#00215c;
+margin-bottom:6px;
 }
 
 input,select{
 width:100%;
-padding:14px;
-border:2px solid #9acbfd;
+padding:13px;
 border-radius:10px;
-font-size:1em;
+border:2px solid #9acbfd;
+font-size:15px;
 }
 
 input:focus,select:focus{
@@ -75,37 +77,18 @@ border-color:#255cc1;
 outline:none;
 }
 
-input.error{
-border-color:#e74c3c;
+/* SLOT STYLES */
+.slot-title{
+margin-top:10px;
+font-weight:700;
+color:#00215c;
 }
 
-.error-message{
-color:#e74c3c;
-font-size:.85em;
-display:none;
-}
-
-.error-message.show{
-display:block;
-}
-
-button{
-width:100%;
-padding:16px;
-background:linear-gradient(135deg,#255cc1,#00215c);
-color:#fff;
-border:none;
-border-radius:10px;
-font-size:1.1em;
-font-weight:600;
-cursor:pointer;
-}
-
-/* SLOT BUTTONS */
 .slot-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:10px;
+margin-top:8px;
 }
 
 .slot-grid input{
@@ -114,11 +97,11 @@ display:none;
 
 .slot-grid label{
 border:2px solid #9acbfd;
-padding:12px;
+padding:10px;
 border-radius:8px;
 text-align:center;
 cursor:pointer;
-font-size:0.9em;
+font-size:14px;
 }
 
 .slot-grid input:checked + label{
@@ -127,22 +110,33 @@ color:#fff;
 border-color:#255cc1;
 }
 
-.cta-note{
+button{
+margin-top:20px;
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:linear-gradient(135deg,#255cc1,#00215c);
+color:#fff;
+font-size:17px;
+font-weight:700;
+cursor:pointer;
+}
+
+.footer-text{
 text-align:center;
-font-size:.9em;
-color:#00215c;
-margin-bottom:8px;
-font-weight:600;
+font-size:12px;
+margin-top:15px;
+color:#555;
 }
 
 .modal{
-display:none;
 position:fixed;
-top:0;left:0;
-width:100%;height:100%;
+inset:0;
 background:rgba(0,33,92,.95);
-align-items:center;
+display:none;
 justify-content:center;
+align-items:center;
 }
 
 .modal.show{
@@ -151,25 +145,26 @@ display:flex;
 
 .modal-content{
 background:#fff;
-padding:40px;
-border-radius:20px;
+padding:35px;
+border-radius:18px;
 text-align:center;
-max-width:350px;
+max-width:340px;
 }
 
 .checkmark{
-width:70px;height:70px;
+width:70px;
+height:70px;
 background:#f1c819;
 border-radius:50%;
-margin:0 auto 20px;
+margin:0 auto 18px;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 }
 
 .checkmark svg{
-width:35px;
-height:35px;
+width:36px;
+height:36px;
 stroke:#fff;
 stroke-width:3;
 fill:none;
@@ -180,32 +175,32 @@ fill:none;
 <body>
 
 <div class="container">
-<h1>SAP is Hiring</h1>
-<p class="subtitle">Get access to <span class="highlight">400+</span> recently posted jobs for free</p>
+
+<div class="logo">TerraTern</div>
+
+<h1>Plan Your Move Abroad</h1>
+<p class="subtitle">Free Immigration Consultation – This Saturday</p>
 
 <form id="jobForm"
 action="https://docs.google.com/forms/d/e/1FAIpQLSdZtgawwebaR-zUMMLmP3j_8AplduEXtuBVk0CNXZTjJpnFjA/formResponse"
 method="POST">
 
-<!-- Full Name -->
+<!-- Name -->
 <div class="form-group">
 <label>Full Name *</label>
-<input type="text" id="name" name="entry.1164035048" required>
-<div class="error-message" id="nameError">Enter valid name</div>
+<input type="text" name="entry.1164035048" required>
 </div>
 
-<!-- Mobile -->
+<!-- Phone -->
 <div class="form-group">
 <label>Mobile Number (Preferably WhatsApp) *</label>
 <input type="tel" id="phone" name="entry.1792445892" required>
-<div class="error-message" id="phoneError">Enter valid 10-digit number</div>
 </div>
 
 <!-- Email -->
 <div class="form-group">
 <label>Email ID *</label>
 <input type="email" id="email" name="entry.1745007900" required>
-<div class="error-message" id="emailError">Enter valid email</div>
 </div>
 
 <!-- Education -->
@@ -249,61 +244,71 @@ method="POST">
 </select>
 </div>
 
-<!-- Slot -->
+<!-- SLOT -->
 <div class="form-group">
 <label>Choose the Slot *</label>
 
+<div class="slot-title">Morning</div>
 <div class="slot-grid">
+<input type="radio" name="entry.1715985963" id="s1" value="10AM - 11AM" required>
+<label for="s1">10AM - 11AM</label>
 
-<input type="radio" name="entry.1715985963" id="s1" value="10am - 11am" required>
-<label for="s1">10am - 11am</label>
-
-<input type="radio" name="entry.1715985963" id="s2" value="11am - 12pm">
-<label for="s2">11am - 12pm</label>
-
-<input type="radio" name="entry.1715985963" id="s3" value="12pm - 1pm">
-<label for="s3">12pm - 1pm</label>
-
-<input type="radio" name="entry.1715985963" id="s4" value="1pm - 2pm">
-<label for="s4">1pm - 2pm</label>
-
-<input type="radio" name="entry.1715985963" id="s5" value="2pm - 3pm">
-<label for="s5">2pm - 3pm</label>
-
-<input type="radio" name="entry.1715985963" id="s6" value="3pm - 4pm">
-<label for="s6">3pm - 4pm</label>
-
-<input type="radio" name="entry.1715985963" id="s7" value="4pm - 5pm">
-<label for="s7">4pm - 5pm</label>
-
-<input type="radio" name="entry.1715985963" id="s8" value="5pm - 6pm">
-<label for="s8">5pm - 6pm</label>
-
-<input type="radio" name="entry.1715985963" id="s9" value="6pm - 7pm">
-<label for="s9">6pm - 7pm</label>
-
-</div>
+<input type="radio" name="entry.1715985963" id="s2" value="11AM - 12PM">
+<label for="s2">11AM - 12PM</label>
 </div>
 
-<div class="cta-note">
-Register and Join our WhatsApp Group for Updates on this Event
+<div class="slot-title">Afternoon</div>
+<div class="slot-grid">
+<input type="radio" name="entry.1715985963" id="s3" value="12PM - 1PM">
+<label for="s3">12PM - 1PM</label>
+
+<input type="radio" name="entry.1715985963" id="s4" value="1PM - 2PM">
+<label for="s4">1PM - 2PM</label>
+
+<input type="radio" name="entry.1715985963" id="s5" value="2PM - 3PM">
+<label for="s5">2PM - 3PM</label>
+</div>
+
+<div class="slot-title">Evening</div>
+<div class="slot-grid">
+<input type="radio" name="entry.1715985963" id="s6" value="3PM - 4PM">
+<label for="s6">3PM - 4PM</label>
+
+<input type="radio" name="entry.1715985963" id="s7" value="4PM - 5PM">
+<label for="s7">4PM - 5PM</label>
+
+<input type="radio" name="entry.1715985963" id="s8" value="5PM - 6PM">
+<label for="s8">5PM - 6PM</label>
+
+<input type="radio" name="entry.1715985963" id="s9" value="6PM - 7PM">
+<label for="s9">6PM - 7PM</label>
+</div>
+
 </div>
 
 <button type="submit">Register Now</button>
 
+<div class="footer-text">
+By registering, you agree to our Privacy Policy & Terms & Conditions
+</div>
+
 </form>
+
 </div>
 
 <!-- THANK YOU MODAL -->
 <div class="modal" id="thankYouModal">
 <div class="modal-content">
+
 <div class="checkmark">
 <svg viewBox="0 0 52 52">
 <polyline points="14 27 22 35 38 19"/>
 </svg>
 </div>
+
 <h2>Thank You!</h2>
 <p>Redirecting you to WhatsApp Group...</p>
+
 </div>
 </div>
 
@@ -353,4 +358,4 @@ alert("Please enter valid phone number and email.");
 </script>
 
 </body>
-</html> 
+</html>
