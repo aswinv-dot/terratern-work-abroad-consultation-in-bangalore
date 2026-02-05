@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<script type="text/javascript">
+    <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "lubdfw20lq");
 </script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Work Abroad Consultation in Bangalore | TerraTern</title>
-
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/aswinv-dot/terratern-work-abroad-consultation-in-bangalore/main/logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -45,11 +42,30 @@ width:100%;
 padding:45px 40px;
 }
 
-.logo-wrap{text-align:center;margin-bottom:15px;}
-.logo-wrap img{width:100px;}
+.logo-wrap{
+display:flex;
+justify-content:center;
+margin-bottom:15px;
+}
 
-h1{text-align:center;color:#00215c;margin-bottom:5px;}
-.subtitle{text-align:center;color:#255cc1;margin-bottom:25px;font-weight:600;}
+.logo-wrap img{
+width:100px;
+height:100px;
+object-fit:contain;
+}
+
+h1{
+color:#00215c;
+text-align:center;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#255cc1;
+text-align:center;
+margin-bottom:30px;
+font-weight:600;
+}
 
 .highlight{
 background:#f1c819;
@@ -58,35 +74,46 @@ border-radius:5px;
 font-weight:700;
 }
 
-.form-group{margin-bottom:18px;}
+.form-group{
+margin-bottom:18px;
+}
 
 label{
 display:block;
 margin-bottom:6px;
-font-weight:600;
 color:#00215c;
+font-weight:600;
 }
 
 input,select{
 width:100%;
 padding:14px;
-border-radius:10px;
 border:2px solid #9acbfd;
+border-radius:10px;
+font-size:0.95em;
+}
+
+input:focus,select:focus{
+border-color:#255cc1;
+outline:none;
 }
 
 button{
 width:100%;
 padding:16px;
-border:none;
-border-radius:10px;
 background:linear-gradient(135deg,#255cc1,#00215c);
 color:#fff;
+border:none;
+border-radius:10px;
+font-size:1.05em;
 font-weight:600;
-font-size:1em;
 cursor:pointer;
 }
 
-/* SLOT GRID */
+/* SLOT */
+
+.slot-section{margin-bottom:15px;}
+.slot-title{font-weight:600;color:#00215c;margin-bottom:8px;}
 
 .slot-grid{
 display:grid;
@@ -102,36 +129,31 @@ padding:11px;
 border-radius:8px;
 text-align:center;
 cursor:pointer;
-position:relative;
 font-size:0.85em;
 }
 
 /* SELECTED */
-
 .slot-grid input:checked + label{
 background:#255cc1;
 color:#fff;
 border-color:#255cc1;
 }
 
-/* GREEN - AVAILABLE */
-
+/* GREEN */
 .slot-green + label{
 background:#d4f8d4;
 border-color:#2ecc71;
 color:#1e8449;
 }
 
-/* ORANGE - FILLING FAST */
-
+/* ORANGE */
 .slot-orange + label{
 background:#ffe0b3;
 border-color:#f39c12;
 color:#a65e00;
 }
 
-/* RED - FILLED */
-
+/* DISABLED = RED */
 .slot-grid input:disabled + label{
 background:#ffd6d6;
 border-color:#e74c3c;
@@ -140,53 +162,38 @@ cursor:not-allowed;
 text-decoration:line-through;
 }
 
-/* TOOLTIP */
-
-.slot-grid label::after{
-content:attr(data-tooltip);
-position:absolute;
-bottom:120%;
-left:50%;
-transform:translateX(-50%);
-background:#000;
-color:#fff;
-padding:4px 8px;
-border-radius:5px;
-font-size:11px;
-opacity:0;
-white-space:nowrap;
-pointer-events:none;
-transition:.2s;
-}
-
-.slot-grid label:hover::after{
-opacity:1;
+.cta-note{
+text-align:center;
+font-size:.85em;
+color:#00215c;
+margin-bottom:8px;
+font-weight:600;
 }
 
 /* MODAL */
 
 .modal{
+display:none;
 position:fixed;
-inset:0;
+top:0;left:0;
+width:100%;height:100%;
 background:rgba(0,33,92,.95);
-display:flex;
 align-items:center;
 justify-content:center;
-visibility:hidden;
 }
 
-.modal.show{visibility:visible;}
+.modal.show{display:flex;}
 
 .modal-content{
 background:#fff;
 padding:40px;
 border-radius:20px;
 text-align:center;
+max-width:350px;
 }
 
 .checkmark{
-width:70px;
-height:70px;
+width:70px;height:70px;
 background:#f1c819;
 border-radius:50%;
 margin:0 auto 20px;
@@ -226,50 +233,104 @@ method="POST">
 
 <div class="form-group">
 <label>Full Name *</label>
-<input name="entry.1164035048" required>
+<input type="text" name="entry.1164035048" required>
 </div>
 
 <div class="form-group">
-<label>Mobile *</label>
-<input id="phone" name="entry.1792445892" required>
+<label>Mobile Number *</label>
+<input type="tel" id="phone" name="entry.1792445892" required>
 </div>
 
 <div class="form-group">
-<label>Email *</label>
-<input id="email" name="entry.1745007900" required>
+<label>Email ID *</label>
+<input type="email" id="email" name="entry.1745007900" required>
 </div>
 
 <div class="form-group">
-<label>Choose Slot *</label>
+<label>Educational Qualification *</label>
+<select name="entry.1246698070" required>
+<option value="">Select</option>
+<option>10th / 12th</option>
+<option>Diploma</option>
+<option>Under Graduate</option>
+<option>Post Graduate</option>
+<option>Doctorate</option>
+</select>
+</div>
 
+<div class="form-group">
+<label>Work Experience *</label>
+<select name="entry.957178699" required>
+<option value="">Select</option>
+<option>Less than 1 year</option>
+<option>1 year</option>
+<option>2 years</option>
+<option>3 years</option>
+<option>4 years</option>
+<option>5 years</option>
+<option>6 years</option>
+<option>7 or more</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Country Interested *</label>
+<select name="entry.1024440748" required>
+<option value="">Select</option>
+<option>Australia</option>
+<option>Canada</option>
+<option>Germany</option>
+<option>Others</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Choose the Slot *</label>
+
+<div class="slot-section">
+<div class="slot-title">Morning</div>
 <div class="slot-grid">
 
-<input type="radio" name="entry.1715985963" id="s1" disabled>
-<label for="s1" data-tooltip="Filled">10am - 11am</label>
+<input type="radio" name="entry.1715985963" id="s1" value="10am - 11am" disabled>
+<label for="s1">10am - 11am</label>
 
-<input type="radio" name="entry.1715985963" id="s2" class="slot-green" required>
-<label for="s2" data-tooltip="Available">11am - 12pm</label>
+<input type="radio" name="entry.1715985963" id="s2" value="11am - 12pm" class="slot-green" required>
+<label for="s2">11am - 12pm</label>
 
-<input type="radio" name="entry.1715985963" id="s3" class="slot-green">
-<label for="s3" data-tooltip="Available">12pm - 1pm</label>
+</div>
+</div>
 
-<input type="radio" name="entry.1715985963" id="s4" class="slot-orange">
-<label for="s4" data-tooltip="Filling Fast">1pm - 2pm</label>
+<div class="slot-section">
+<div class="slot-title">Afternoon</div>
+<div class="slot-grid">
 
-<input type="radio" name="entry.1715985963" id="s5" disabled>
-<label for="s5" data-tooltip="Filled">2pm - 3pm</label>
+<input type="radio" name="entry.1715985963" id="s3" value="12pm - 1pm" class="slot-green">
+<label for="s3">12pm - 1pm</label>
 
-<input type="radio" name="entry.1715985963" id="s6" class="slot-orange">
-<label for="s6" data-tooltip="Filling Fast">3pm - 4pm</label>
+<input type="radio" name="entry.1715985963" id="s4" value="1pm - 2pm" class="slot-orange">
+<label for="s4">1pm - 2pm</label>
 
-<input type="radio" name="entry.1715985963" id="s7" disabled>
-<label for="s7" data-tooltip="Filled">4pm - 5pm</label>
+<input type="radio" name="entry.1715985963" id="s5" value="2pm - 3pm" disabled>
+<label for="s5">2pm - 3pm</label>
 
-<input type="radio" name="entry.1715985963" id="s8" disabled>
-<label for="s8" data-tooltip="Filled">5pm - 6pm</label>
+</div>
+</div>
 
-<input type="radio" name="entry.1715985963" id="s9" disabled>
-<label for="s9" data-tooltip="Filled">6pm - 7pm</label>
+<div class="slot-section">
+<div class="slot-title">Evening</div>
+<div class="slot-grid">
+
+<input type="radio" name="entry.1715985963" id="s6" value="3pm - 4pm" class="slot-orange">
+<label for="s6">3pm - 4pm</label>
+
+<input type="radio" name="entry.1715985963" id="s7" value="4pm - 5pm" disabled>
+<label for="s7">4pm - 5pm</label>
+
+<input type="radio" name="entry.1715985963" id="s8" value="5pm - 6pm" disabled>
+<label for="s8">5pm - 6pm</label>
+
+<input type="radio" name="entry.1715985963" id="s9" value="6pm - 7pm" disabled>
+<label for="s9">6pm - 7pm</label>
 
 </div>
 </div>
@@ -278,9 +339,14 @@ method="POST">
 
 </form>
 
-</div>
+<p style="text-align:center;font-size:12px;margin-top:12px;color:#00215c;">
+By registering, you agree to our 
+<a href="https://terratern.com/privacy-policy" target="_blank" style="color:#255cc1;font-weight:600;text-decoration:none;">Privacy Policy</a> 
+and 
+<a href="https://terratern.com/terms-and-conditions" target="_blank" style="color:#255cc1;font-weight:600;text-decoration:none;">Terms & Conditions</a>.
+</p>
 
-<!-- THANK YOU MODAL -->
+</div>
 
 <div class="modal" id="thankYouModal">
 <div class="modal-content">
@@ -305,12 +371,19 @@ phone.addEventListener("input",()=>{
 phone.value=phone.value.replace(/\D/g,'').slice(0,10);
 });
 
-form.addEventListener("submit",e=>{
+function validatePhone(){
+return /^\d{10}$/.test(phone.value);
+}
 
-if(!/^\d{10}$/.test(phone.value) ||
-!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+function validateEmail(){
+return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
+}
+
+form.addEventListener("submit",function(e){
+
+if(!validatePhone() || !validateEmail()){
 e.preventDefault();
-alert("Enter valid phone & email");
+alert("Please enter valid phone number and email.");
 return;
 }
 
