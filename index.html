@@ -132,17 +132,32 @@ cursor:pointer;
 font-size:0.85em;
 }
 
+/* SELECTED */
 .slot-grid input:checked + label{
 background:#255cc1;
 color:#fff;
 border-color:#255cc1;
 }
 
-/* DISABLED SLOTS */
+/* GREEN */
+.slot-green + label{
+background:#d4f8d4;
+border-color:#2ecc71;
+color:#1e8449;
+}
+
+/* ORANGE */
+.slot-orange + label{
+background:#ffe0b3;
+border-color:#f39c12;
+color:#a65e00;
+}
+
+/* DISABLED = RED */
 .slot-grid input:disabled + label{
-background:#e5e5e5;
-border-color:#ccc;
-color:#888;
+background:#ffd6d6;
+border-color:#e74c3c;
+color:#c0392b;
 cursor:not-allowed;
 text-decoration:line-through;
 }
@@ -275,32 +290,37 @@ method="POST">
 <div class="slot-section">
 <div class="slot-title">Morning</div>
 <div class="slot-grid">
+
 <input type="radio" name="entry.1715985963" id="s1" value="10am - 11am" disabled>
 <label for="s1">10am - 11am</label>
 
-<input type="radio" name="entry.1715985963" id="s2" value="11am - 12pm" required>
+<input type="radio" name="entry.1715985963" id="s2" value="11am - 12pm" class="slot-green" required>
 <label for="s2">11am - 12pm</label>
+
 </div>
 </div>
 
 <div class="slot-section">
 <div class="slot-title">Afternoon</div>
 <div class="slot-grid">
-<input type="radio" name="entry.1715985963" id="s3" value="12pm - 1pm">
+
+<input type="radio" name="entry.1715985963" id="s3" value="12pm - 1pm" class="slot-green">
 <label for="s3">12pm - 1pm</label>
 
-<input type="radio" name="entry.1715985963" id="s4" value="1pm - 2pm">
+<input type="radio" name="entry.1715985963" id="s4" value="1pm - 2pm" class="slot-orange">
 <label for="s4">1pm - 2pm</label>
 
 <input type="radio" name="entry.1715985963" id="s5" value="2pm - 3pm" disabled>
 <label for="s5">2pm - 3pm</label>
+
 </div>
 </div>
 
 <div class="slot-section">
 <div class="slot-title">Evening</div>
 <div class="slot-grid">
-<input type="radio" name="entry.1715985963" id="s6" value="3pm - 4pm">
+
+<input type="radio" name="entry.1715985963" id="s6" value="3pm - 4pm" class="slot-orange">
 <label for="s6">3pm - 4pm</label>
 
 <input type="radio" name="entry.1715985963" id="s7" value="4pm - 5pm" disabled>
@@ -311,6 +331,7 @@ method="POST">
 
 <input type="radio" name="entry.1715985963" id="s9" value="6pm - 7pm" disabled>
 <label for="s9">6pm - 7pm</label>
+
 </div>
 </div>
 
@@ -378,4 +399,3 @@ window.location.href="https://chat.whatsapp.com/JplilV8E5qo8cp2y9ElWM8";
 
 </body>
 </html>
-
